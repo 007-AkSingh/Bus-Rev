@@ -1,9 +1,9 @@
 <?php
+$mysqli = new mysqli("remotemysql.com","ivOpirzaoj","niG8UEqz3y","ivOpirzaoj");
 
-$connection = mysqli_connect("localhost",'root','','bus');
-
-if(!$connection) {
-	die("Unable to connect" . mysqli_error($connection));
+// Check connection
+if ($mysqli -> connect_errno) {
+  echo "Failed to connect to MySQL: " . $mysqli -> connect_error;
+  exit();
 }
-
 ?>
